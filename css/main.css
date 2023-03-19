@@ -1,0 +1,233 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: #dcdcec;
+}
+
+.kanban {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10vh;
+    padding: 10px;
+    width: 100vh;
+}
+
+.kanban * {
+    font-family: sans-serif;
+}
+
+.kanban__column {
+    background: #f2eff5;
+    border: 1px solid #ffffff;
+    backdrop-filter: blur(50px);
+    flex: 1;
+}
+
+.kanban__column:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+.kanban__column-title {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    padding: 3vh;
+    justify-content: center;
+    margin: 1vh 1vh 1vh 1vh;
+    color: #2e2e4d;
+    background: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    user-select: none;
+}
+
+.kanban__item {
+
+    margin: 1vh 1vh 1vh 1vh;
+    padding: 0.5vh;
+    background: #f8f8fc;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+
+.kanban__item-title {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0.5vh;
+}
+
+.kanban__item-test {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.kanban__item-wrapper {
+
+    height: 10vh;
+]
+}
+
+.kanban__item-buttonweapper {
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.kanban__item-button {
+    display: flex;
+    align-content: flex-end;
+    background: linear-gradient(180deg, #cc00ff 0%, #8f00ff 100%);
+    border-radius: 4px;
+    padding: 0.3vh 0.9vh 0.3vh 0.9vh;
+    border: none;
+    color: white;
+}
+
+.kanban__item-input {
+    background-color: transparent;
+    line-height: 1.4;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+    text-align: left;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    /*font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 1vh 1vh 1vh 1vh;
+    padding: 2vh;
+    box-sizing: border-box;
+    background: #f8f8fc;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    cursor: pointer;*/
+}
+
+.kanban__item-input:focus {
+    cursor: text;
+}
+
+.kanban__dropzone {
+    height: 10px;
+    transition: background 0.15s, height 0.15s;
+}
+
+.kanban__dropzone--active {
+    height: 20px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.kanban__add-item {
+    display: flex;
+    justify-content: center;
+    margin: 1vh 1vh 1vh 1vh;
+    font-size: 16px;
+    padding: 2vh;
+    box-sizing: border-box;
+    color: white;
+    background: linear-gradient(180deg, #cc00ff 0%, #8f00ff 100%);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-content: center;
+}
+
+
+.Modal__box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.modal__item-wrapperall {
+    margin-top: 10vh;
+    padding: 3.2vh;
+    margin-bottom: 10vh;
+    background: #f8f8fc;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+
+}
+
+.modal__item-wrapper {
+    width: 50vh;
+}
+
+.modal__item-title {
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    outline: none;
+    margin-bottom: 2vh;
+
+}
+
+.modal__item-input {
+    background-color: transparent;
+    line-height: 1.4;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+    text-align: left;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    height: 40vh;
+}
+
+.modal__item-wrapperbuttom {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal__item-button {
+    display: flex;
+    padding: 2vh;
+    background: linear-gradient(180deg, #cc00ff 0%, #8f00ff 100%);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+
+

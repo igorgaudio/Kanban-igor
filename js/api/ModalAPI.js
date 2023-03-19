@@ -20,6 +20,11 @@ export default class Modal {
     this.content = content;
     console.log(title);
 
+    const viewmodal = document.getElementById("modal");
+    const closemodal = () => {
+      viewmodal.setAttribute("style", "display : none");
+    };
+
     this.elements.button.addEventListener("click", () => {
       const newTitle = this.elements.contitle.textContent.trim();
       const newContent = this.elements.input.value.trim();
@@ -36,15 +41,18 @@ export default class Modal {
         { content: this.content }
       );
 
-      const viewmodal = document.getElementById("modal");
-      const closemodal = () => {
-        viewmodal.setAttribute("style", "display : none");
-      };
-
       location.reload();
 
       closemodal();
-    });
+    })
+
+    const onBlur = () => {
+      location.reload();
+
+      closemodal();
+  }
+  this.elements.contitle.addEventListener("blur", onBlur);
+  this.elements.input.addEventListener("blur", onBlur);
   }
 
   static createRoot() {

@@ -82,23 +82,6 @@ export default class Item {
       openModal()
 
 
-
-
-
-
-
-
-
-
-
-
-      /*const Modal = document.getElementById("modal")
-      const openModal = () =>{
-        Modal.setAttribute('style', 'display : flex')
-      }
-
-      openModal();*/
-
     })
 
 
